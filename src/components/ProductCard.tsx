@@ -16,16 +16,19 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
   return (
     <div className="product-card">
-      <img
+      <div className="image-container">
+        <div className="imgcircle"></div>
+         <img
         src={product.image}
         alt={product.name}
         className="product-image"
       />
+      </div>
+     
       <div className="product-content">
         <h2 className="product-name">{product.name}</h2>
         <p className="product-description">{product.description}</p>
         <div className="product-footer">
-          <span className="product-price">${product.price}</span>
           <button
             className="add-to-cart-btn"
             onClick={onAddToCart}

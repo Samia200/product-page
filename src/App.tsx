@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import ProductCard from './components/ProductCard'
+import logo from './assets/logo.png'
+import choco from './assets/choco.png'
+import coconut from './assets/coconut.png'
+import mango from './assets/mango.png'
 
 interface Product {
   id: number
@@ -17,25 +21,25 @@ const App: React.FC = () => {
       id: 1,
       name: 'Premium Wireless Headphones',
       price: 199.99,
-      image: 'https://via.placeholder.com/300x200?text=Headphones',
+      image: choco,
       description: 'High-quality sound with active noise cancellation and 30-hour battery life.'
     },
     {
       id: 2,
       name: 'Ultra HD 4K Webcam',
       price: 89.99,
-      image: 'https://via.placeholder.com/300x200?text=Webcam',
+      image: coconut,
       description: 'Crystal clear 4K video recording perfect for streaming and video calls.'
     },
     {
       id: 3,
       name: 'Ergonomic Mechanical Keyboard',
       price: 149.99,
-      image: 'https://via.placeholder.com/300x200?text=Keyboard',
+      image: mango,
       description: 'Premium mechanical switches with customizable RGB backlighting.'
     }
   ]
-
+ const menuItems = ['Home', 'Products', 'About', 'Contact']
   const handleAddToCart = () => {
     setCart(cart + 1)
   }
@@ -43,10 +47,19 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Product Store</h1>
+       
+        <img src={logo} alt="Logo" />
+         <ul className="nav-links">
+          {menuItems.map((item, index) => (
+            <li key={index} className="nav-item">
+              {item}
+            </li>
+          ))}
+
+        </ul>
         <div className="cart-badge">Cart: {cart} items</div>
       </header>
-
+      <div className="ovraly"></div>
       <main className="products-grid">
         {products.map((product) => (
           <ProductCard
