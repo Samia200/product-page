@@ -4,6 +4,10 @@ import logo from './assets/logo.png'
 import choco from './assets/choco.png'
 import coconut from './assets/coconut.png'
 import mango from './assets/mango.png'
+import matcha from './assets/matcha.png'
+import strabary from './assets/starabry.png'
+
+
 
 interface Product {
   id: number
@@ -33,6 +37,22 @@ const App: React.FC = () => {
     },
     {
       id: 3,
+      name: 'Ergonomic Mechanical Keyboard',
+      price: 149.99,
+      image: matcha,
+      description: 'Premium mechanical switches with customizable RGB backlighting.'
+    }
+    ,
+    {
+      id: 4,
+      name: 'Ergonomic Mechanical Keyboard',
+      price: 149.99,
+      image: strabary,
+      description: 'Premium mechanical switches with customizable RGB backlighting.'
+    }
+    ,
+    {
+      id: 5,
       name: 'Ergonomic Mechanical Keyboard',
       price: 149.99,
       image: mango,

@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
             className="add-to-cart-btn"
             onClick={onAddToCart}
           >
-            Add to Cart
+            SHOP
           </button>
         </div>
       </div>
